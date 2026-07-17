@@ -1,4 +1,4 @@
-const coldRoomService = require('../services/coldRoomService');
+const coldRoomService = require('../services/coldroom.service');
 
 exports.createColdRoom = async (req, res) => {
   try {

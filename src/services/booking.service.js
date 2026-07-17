@@ -1,5 +1,5 @@
-const bookingRepository = require('../repositories/bookingRepository');
-const bookingHistoryRepository = require('../repositories/bookingHistoryRepository');
+const bookingRepository = require('../repositories/booking.repository');
+const bookingHistoryRepository = require('../repositories/booking.history.repository');
 
 class BookingService {
   async createBooking(data) {

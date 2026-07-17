@@ -1,24 +1,24 @@
 const express = require('express');
 const router = express.Router();
-const { protect } = require('../middleware/auth');
-const { verifiedFarmerOnly } = require('../middleware/verifiedFarmer');
+// const { protect } = require('../middleware/auth');
+// const { verifiedFarmerOnly } = require('../middleware/verifiedFarmer');
 const {
   createBooking,
   getAllBookings,
   getBooking,
   updateBooking,
   deleteBooking,
-} = require('../controllers/bookingController');
+} = require('../controllers/booking.controller');
 
-router.post('/', protect, verifiedFarmerOnly, createBooking);
-router.get('/', protect, getAllBookings);
-router.get('/:id', protect, getBooking);
-router.patch('/:id', protect, updateBooking);
-router.delete('/:id', protect, deleteBooking);
+router.post('/',  createBooking);
+router.get('/',  getAllBookings);
+router.get('/:id',  getBooking);
+router.patch('/:id',  updateBooking);
+router.delete('/:id', deleteBooking);
 
 
-const { getBookingHistory } = require('../controllers/bookingHistoryController');
+const { getBookingHistory } = require('../controllers/booking.controller');
 
-router.get('/:id/history', protect, getBookingHistory);
+router.get('/:id/history',  getBookingHistory);
 
 module.exports = router;

@@ -1,5 +1,5 @@
-const reviewRepository = require('../repositories/reviewRepository');
-const coldRoomRepository = require('../repositories/coldRoomRepository');
+const reviewRepository = require('../repositories/review.repository');
+const coldRoomRepository = require('../repositories/coldRoom.repository');
 
 class ReviewService {
   async createReview(data) {

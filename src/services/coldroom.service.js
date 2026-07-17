@@ -1,4 +1,4 @@
-const coldRoomRepository = require('../repositories/coldRoomRepository');
+const coldRoomRepository = require('../repositories/coldRoom.repository');
 
 class ColdRoomService {
   async createColdRoom(data) {

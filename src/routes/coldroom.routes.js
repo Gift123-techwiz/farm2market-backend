@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const { protect } = require('../middleware/auth');
-const { verifiedFarmerOnly } = require('../middleware/verifiedFarmer');
+
+// const { protect } = require('../middleware/auth');
+// const { verifiedFarmerOnly } = require('../middleware/verifiedFarmer');
 const {
   createColdRoom,
   getAllColdRooms,
   getColdRoom,
   updateColdRoom,
-} = require('../controllers/coldRoomController');
+} = require('../controllers/coldroom.controller');
 
-router.post('/', protect, verifiedFarmerOnly, createColdRoom);
+router.post('/', createColdRoom);
 router.get('/', getAllColdRooms);
 router.get('/:id', getColdRoom);
-router.patch('/:id', protect, verifiedFarmerOnly, updateColdRoom);
+router.patch('/:id',  updateColdRoom);
 
 module.exports = router;

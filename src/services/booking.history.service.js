@@ -1,5 +1,5 @@
-const bookingHistoryRepository = require('../repositories/bookingHistoryRepository');
-const bookingRepository = require('../repositories/bookingRepository');
+const bookingHistoryRepository = require('../repositories/booking.history.repository');
+const bookingRepository = require('../repositories/booking.repository');
 
 class BookingHistoryService {
   async getBookingHistory(bookingId) {

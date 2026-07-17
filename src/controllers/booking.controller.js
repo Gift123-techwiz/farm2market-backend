@@ -1,4 +1,4 @@
-const bookingService = require('../services/bookingService');
+const bookingService = require('../services/booking.service');
 
 exports.createBooking = async (req, res) => {
   try {
@@ -50,7 +50,7 @@ exports.deleteBooking = async (req, res) => {
   }
 };
 
-const bookingHistoryService = require('../services/bookingHistoryService');
+const bookingHistoryService = require('../services/booking.history.service');
 
 exports.getBookingHistory = async (req, res) => {
   try {
