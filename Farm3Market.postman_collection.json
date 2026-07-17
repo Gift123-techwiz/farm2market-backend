@@ -1,0 +1,2492 @@
+{
+  "info": {
+    "_postman_id": "a80bb0d9-5bb1-4532-9b24-054d53dfaf9c",
+    "name": "Farm3Market",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54690466",
+    "_collection_link": "https://go.postman.co/collection/54690466-a80bb0d9-5bb1-4532-9b24-054d53dfaf9c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "SignUp/SignIn",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"full_name\": \"Admin Salewa\",\r\n    \"email\": \"isiuquirkventures@gmail.com\",\r\n    \"phone\": \"08031118954\",\r\n    \"password\": \"password123\",\r\n    \"role\": \"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/auth/register",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"full_name\": \"Gift Isiuwa\",\r\n    \"email\": \"gift@example.com\",\r\n    \"phone\": \"08012345678\",\r\n    \"password\": \"password123\",\r\n    \"role\": \"farmer\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/register",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "399"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"18f-6eEdY/uT10a4R2cemO21+SVxHFY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 15:31:32 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"full_name\": \"Gift Isiuwa\",\n            \"email\": \"gift@example.com\",\n            \"phone\": \"08012345678\",\n            \"role\": \"farmer\",\n            \"is_verified\": false\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJnaWZ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImZhcm1lciIsImlhdCI6MTc4NDIxNTg5MiwiZXhwIjoxNzg0MjE5NDkyfQ.h1CM_Uyc7qD73AepA8XmRpXm61Jv7I4eDXmWxjSX9bA\"\n    }\n}"
+            },
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"full_name\": \"Iyanu Godwin\",\r\n    \"email\": \"igiewegift793@gmail.com\",\r\n    \"phone\": \"08055227737\",\r\n    \"password\": \"password123\",\r\n    \"role\": \"buyer\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/register",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "421"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a5-xEFj3lJu06BCerLJ2d6ZdIKenMA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 04:40:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"full_name\": \"Iyanu Godwin\",\n            \"email\": \"igiewegift793@gmail.com\",\n            \"role\": \"buyer\",\n            \"is_verified\": false\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJpZ2lld2VnaWZ0NzkzQGdtYWlsLmNvbSIsInJvbGUiOiJidXllciIsImlhdCI6MTc4NDI2MzIyNywiZXhwIjoxNzg0MjY2ODI3fQ.7YNu7-GOEC5SjAVpayNXMn6GCH8QyLEC5jKBdcIyMX0\",\n        \"verification_code\": \"146280\"\n    }\n}"
+            },
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"full_name\": \"Admin Salewa\",\r\n    \"email\": \"isiuquirkventures@gmail.com\",\r\n    \"phone\": \"08031118954\",\r\n    \"password\": \"password123\",\r\n    \"role\": \"admin\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/register",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "401"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"191-7j9Qdvt06UPrhihmQTL/3VZ+4Cc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 13:06:18 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 3,\n            \"full_name\": \"Admin Salewa\",\n            \"email\": \"isiuquirkventures@gmail.com\",\n            \"role\": \"admin\",\n            \"is_verified\": false\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJpc2l1cXVpcmt2ZW50dXJlc0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODQyOTM1NzUsImV4cCI6MTc4NDI5NzE3NX0.vYpxX7xvZ_fE-U2WbaL60a9wpPAdA2ZOYtYW72TI_so\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"igiewegift793@gmail.com\",\r\n    \"password\": \"newpassword123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/auth/login",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"gift@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "text"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/login",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "99"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"63-yBAlVR+aLXlLUHg3yHom0bzUSzw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 15:39:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Cannot destructure property 'email' of 'req.body' as it is undefined.\"\n}"
+            },
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"gift@example.com\",\r\n    \"password\": \"password123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/login",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "365"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"16d-s1UW4Zm8638dspXWbmhN7r3svsY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 15:45:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"full_name\": \"Gift Isiuwa\",\n            \"email\": \"gift@example.com\",\n            \"role\": \"farmer\",\n            \"is_verified\": false\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJnaWZ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImZhcm1lciIsImlhdCI6MTc4NDIxNjcyMSwiZXhwIjoxNzg0MjIwMzIxfQ.V6uMU0XQLwRp2_ammZkXCQHf0aPfOtyqTjwgkZG9NHo\"\n    }\n}"
+            },
+            {
+              "name": "Login with new password",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"igiewegift793@gmail.com\",\r\n    \"password\": \"newpassword123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/login",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "379"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"17b-WwntJ1t6R+C8aAaiWElAulqiQeg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 06:13:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"full_name\": \"Iyanu Godwin\",\n            \"email\": \"igiewegift793@gmail.com\",\n            \"role\": \"buyer\",\n            \"is_verified\": true\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJpZ2lld2VnaWZ0NzkzQGdtYWlsLmNvbSIsInJvbGUiOiJidXllciIsImlhdCI6MTc4NDI2ODc5NiwiZXhwIjoxNzg0MjcyMzk2fQ.MSCvt6Ti0S_mB59ImA9cTDJSoLaOI1OjpxKvp-CItUo\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "item": [
+        {
+          "name": "Profile",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "Profile",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BaseUrl}}/users/profile",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "55"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"37-J1JurpJaJ2iET3UTTfEcU3gjszc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 15:54:17 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Invalid or expired token.\"\n}"
+            },
+            {
+              "name": "Profile",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BaseUrl}}/users/profile",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "337"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"151-liCliN0SrJdOFIfdHOjOKG8d8bg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 15:55:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"full_name\": \"Gift Isiuwa\",\n        \"email\": \"gift@example.com\",\n        \"phone\": \"08012345678\",\n        \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n        \"role\": \"farmer\",\n        \"is_verified\": false,\n        \"verified_badge\": false,\n        \"is_active\": true,\n        \"created_at\": \"2026-07-16T15:31:32.880Z\",\n        \"updated_at\": \"2026-07-16T15:31:32.880Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Profile",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJnaWZ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImZhcm1lciIsImlhdCI6MTc4NDIxNjcyMSwiZXhwIjoxNzg0MjIwMzIxfQ.V6uMU0XQLwRp2_ammZkXCQHf0aPfOtyq",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"full_name\": \"Gift Isiuwa Updated\",\r\n    \"phone\": \"09153849820\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/users/profile",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "users",
+                "profile"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Profile",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"full_name\": \"Gift Isiuwa Updated\",\r\n    \"phone\": \"09153849820\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/users/profile",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "55"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"37-J1JurpJaJ2iET3UTTfEcU3gjszc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 15:58:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Invalid or expired token.\"\n}"
+            },
+            {
+              "name": "Update Profile",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"full_name\": \"Gift Isiuwa Updated\",\r\n    \"phone\": \"09153849820\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/users/profile",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "386"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"182-TRDhkkkc+qqC/FGXQubHggvM5+I\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 16 Jul 2026 15:59:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Profile updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"full_name\": \"Gift Isiuwa Updated\",\n        \"email\": \"gift@example.com\",\n        \"phone\": \"09153849820\",\n        \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n        \"role\": \"farmer\",\n        \"is_verified\": false,\n        \"verified_badge\": false,\n        \"is_active\": true,\n        \"created_at\": \"2026-07-16T15:31:32.880Z\",\n        \"updated_at\": \"2026-07-16T15:59:50.690Z\"\n    }\n}"
+            },
+            {
+              "name": "Update Profile",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"igiewegiftisiuwa@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/users/profile",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "users",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "520"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"208-TDVS9PdqWmsSmr/V2Gmk1yB3K+o\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 04:48:36 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Profile updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"full_name\": \"Gift Isiuwa Updated\",\n        \"email\": \"igiewegiftisiuwa@gmail.com\",\n        \"phone\": \"09153849820\",\n        \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n        \"role\": \"farmer\",\n        \"is_verified\": false,\n        \"verified_badge\": false,\n        \"is_active\": true,\n        \"verification_token\": null,\n        \"verification_token_expires\": null,\n        \"reset_password_token\": null,\n        \"reset_password_token_expires\": null,\n        \"created_at\": \"2026-07-16T15:31:32.880Z\",\n        \"updated_at\": \"2026-07-17T04:48:36.708Z\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "VerifyEmail",
+      "item": [
+        {
+          "name": "test_verifyEmail",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"146280\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/auth/verify-email",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "verify-email"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "verifyEmail",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"token\": \"146280\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/verify-email",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "verify-email"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "56"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"38-oYZCwGirBsI2TcYe2Zke76tAja8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 04:42:47 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Email verified successfully\"\n}"
+            },
+            {
+              "name": "resend otp",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"igiewegiftisiuwa@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/resend-verification",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "resend-verification"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "91"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"5b-dO7YEHrEJW80l5Bj2uXSeZ/ACOk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 04:52:01 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Verification code resent\",\n    \"data\": {\n        \"verification_code\": \"797837\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "email verification",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJnaWZ0QGV4YW1wbGUuY29tIiwicm9sZSI6ImZhcm1lciIsImlhdCI6MTc4NDI2MzY0NiwiZXhwIjoxNzg0MjY3MjQ2fQ.Dy28zaSiXbzpW1Ys_D5wIsDA9TUC5a-a_cdFzgBkQtQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"igiewegift793@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/auth/resend-verification",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "resend-verification"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "email verification",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"igiewegift793@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/resend-verification",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "resend-verification"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "52"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"34-dpCR6ojFyOSiMCXDznBwNUJg4Ko\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 05:31:41 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Email already verified\"\n}"
+            },
+            {
+              "name": "email verification",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"igiewegiftisiuwa@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/resend-verification",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "resend-verification"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "111"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"6f-qSPSG/EidVjK1CBRBdfr5ZR/hYQ\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 05:35:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Verification code resent\",\n    \"data\": {\n        \"message\": \"Verification code sent successfully.\"\n    }\n}"
+            },
+            {
+              "name": "email verification",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"token\": \"607891\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/verify-email",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "verify-email"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "56"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"38-oYZCwGirBsI2TcYe2Zke76tAja8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 05:36:41 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Email verified successfully\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Password",
+      "item": [
+        {
+          "name": "ForgotPassword",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"igiewegift793@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/auth/forgot-password",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "forgot-password"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ForgotPassword",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"igiewegift793@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/forgot-password",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "forgot-password"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "67"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"43-lIIqfxQTSiaiL0d1jbybXrPfiic\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 06:08:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Password reset code sent successfully.\"\n}"
+            },
+            {
+              "name": "ResetPassword",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"token\": \"285522\",\r\n    \"password\": \"newpassword123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/auth/reset-password",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "reset-password"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "55"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"37-ZX/uHdUYCkb6Bu7tvRl5u4k3nfk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 06:11:37 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Password reset successful.\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "initialize payment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpZ2lld2VnaWZ0aXNpdXdhQGdtYWlsLmNvbSIsInJvbGUiOiJmYXJtZXIiLCJpYXQiOjE3ODQyODE2NjIsImV4cCI6MTc4NDI4NTI2Mn0.oTDFsaWn1GjPeAReT9BZn77FU7vhEzrPq_bDX_hbhGY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"amount\": 5000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/payments/initialize",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "payments",
+                "initialize"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "initialize payment",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"amount\": 5000\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/payments/initialize",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "initialize"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "829"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"33d-6bYB6eNgk0ssmUoRHL8PiIOOBYA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 10:02:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Payment initialized successfully\",\n    \"data\": {\n        \"payment\": {\n            \"amount\": 5000,\n            \"payment_method\": \"paystack\",\n            \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\",\n            \"status\": \"pending\",\n            \"user\": {\n                \"id\": 1,\n                \"full_name\": \"Gift Isiuwa Updated\",\n                \"email\": \"igiewegiftisiuwa@gmail.com\",\n                \"phone\": \"09153849820\",\n                \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n                \"role\": \"farmer\",\n                \"is_verified\": true,\n                \"verified_badge\": false,\n                \"is_active\": true,\n                \"verification_token\": null,\n                \"verification_token_expires\": null,\n                \"reset_password_token\": null,\n                \"reset_password_token_expires\": null,\n                \"created_at\": \"2026-07-16T15:31:32.880Z\",\n                \"updated_at\": \"2026-07-17T05:36:41.163Z\"\n            },\n            \"paid_at\": null,\n            \"id\": 1\n        },\n        \"authorization_url\": \"https://checkout.paystack.com/9gztfc295gqykqv\",\n        \"access_code\": \"9gztfc295gqykqv\",\n        \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Verify payment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpZ2lld2VnaWZ0aXNpdXdhQGdtYWlsLmNvbSIsInJvbGUiOiJmYXJtZXIiLCJpYXQiOjE3ODQyODE2NjIsImV4cCI6MTc4NDI4NTI2Mn0.oTDFsaWn1GjPeAReT9BZn77FU7vhEzrPq_bDX_hbhGY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/payments/verify",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "payments",
+                "verify"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Verify payment",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/payments/verify",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "verify"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "694"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2b6-SdDkVLH7A3iBbGQXWqNSNW3cRiM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 10:05:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Payment verified successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"amount\": \"5000.00\",\n        \"payment_method\": \"paystack\",\n        \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\",\n        \"status\": \"pending\",\n        \"paid_at\": null,\n        \"user\": {\n            \"id\": 1,\n            \"full_name\": \"Gift Isiuwa Updated\",\n            \"email\": \"igiewegiftisiuwa@gmail.com\",\n            \"phone\": \"09153849820\",\n            \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n            \"role\": \"farmer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-16T15:31:32.880Z\",\n            \"updated_at\": \"2026-07-17T05:36:41.163Z\"\n        },\n        \"order\": null,\n        \"refunds\": []\n    }\n}"
+            },
+            {
+              "name": "Verify payment",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/payments/verify",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "verify"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "719"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2cf-hk6fVa9RwUV9SMvXjJ5mqNobk1s\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 10:14:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Payment verified successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"amount\": \"5000.00\",\n        \"payment_method\": \"paystack\",\n        \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\",\n        \"status\": \"successful\",\n        \"paid_at\": \"2026-07-17T10:14:53.367Z\",\n        \"user\": {\n            \"id\": 1,\n            \"full_name\": \"Gift Isiuwa Updated\",\n            \"email\": \"igiewegiftisiuwa@gmail.com\",\n            \"phone\": \"09153849820\",\n            \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n            \"role\": \"farmer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-16T15:31:32.880Z\",\n            \"updated_at\": \"2026-07-17T05:36:41.163Z\"\n        },\n        \"order\": null,\n        \"refunds\": []\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Payment History",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpZ2lld2VnaWZ0aXNpdXdhQGdtYWlsLmNvbSIsInJvbGUiOiJmYXJtZXIiLCJpYXQiOjE3ODQyODE2NjIsImV4cCI6MTc4NDI4NTI2Mn0.oTDFsaWn1GjPeAReT9BZn77FU7vhEzrPq_bDX_hbhGY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/payments/history",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "payments",
+                "history"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Payment History",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BaseUrl}}/payments/history",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "history"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "191"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"bf-LVDf6UELkiLnsQmXtuI29D7zBSM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 10:15:20 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"amount\": \"5000.00\",\n            \"payment_method\": \"paystack\",\n            \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\",\n            \"status\": \"successful\",\n            \"paid_at\": \"2026-07-17T10:14:53.367Z\"\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Refund",
+      "item": [
+        {
+          "name": "Request Refund",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpZ2lld2VnaWZ0aXNpdXdhQGdtYWlsLmNvbSIsInJvbGUiOiJmYXJtZXIiLCJpYXQiOjE3ODQyOTA4NjksImV4cCI6MTc4NDI5NDQ2OX0.af-dM7ClCP8G-wyWez8q3WJMSToks48wVIDhUMVcPok",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\",\r\n    \"reason\": \"Wrong payment\",\r\n    \"refund_method\": \"wallet\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/payments/refund",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "payments",
+                "refund"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Request Refund",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\",\r\n    \"reason\": \"Wrong payment\",\r\n    \"refund_method\": \"wallet\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/payments/refund",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "refund"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1275"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4fb-QS59YN+cVdBYjbQjiF3/viAJDCM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 12:28:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"reason\": \"Wrong payment\",\n        \"refund_method\": \"wallet\",\n        \"status\": \"pending\",\n        \"payment\": {\n            \"id\": 1,\n            \"amount\": \"5000.00\",\n            \"payment_method\": \"paystack\",\n            \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\",\n            \"status\": \"successful\",\n            \"paid_at\": \"2026-07-17T10:14:53.367Z\",\n            \"user\": {\n                \"id\": 1,\n                \"full_name\": \"Gift Isiuwa Updated\",\n                \"email\": \"igiewegiftisiuwa@gmail.com\",\n                \"phone\": \"09153849820\",\n                \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n                \"role\": \"farmer\",\n                \"is_verified\": true,\n                \"verified_badge\": false,\n                \"is_active\": true,\n                \"verification_token\": null,\n                \"verification_token_expires\": null,\n                \"reset_password_token\": null,\n                \"reset_password_token_expires\": null,\n                \"created_at\": \"2026-07-16T15:31:32.880Z\",\n                \"updated_at\": \"2026-07-17T05:36:41.163Z\"\n            },\n            \"order\": null,\n            \"refunds\": []\n        },\n        \"requested_by\": {\n            \"id\": 1,\n            \"full_name\": \"Gift Isiuwa Updated\",\n            \"email\": \"igiewegiftisiuwa@gmail.com\",\n            \"phone\": \"09153849820\",\n            \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n            \"role\": \"farmer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-16T15:31:32.880Z\",\n            \"updated_at\": \"2026-07-17T05:36:41.163Z\"\n        },\n        \"id\": 1,\n        \"created_at\": \"2026-07-17T12:28:15.753Z\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Approve refund",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJpc2l1cXVpcmt2ZW50dXJlc0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODQyOTM2NDMsImV4cCI6MTc4NDI5NzI0M30.PcUYzU2ms3cJxBSROv2v1pshYPPvdVvFaYoCaXwXwlI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/admin/refunds/1",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "admin",
+                "refunds",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Approve refund",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{BaseUrl}}/admin/refunds/1",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "refunds",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1277"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4fd-JNKknXPDyf2BCN916Va+lAidQLA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 13:20:00 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"reason\": \"Wrong payment\",\n        \"refund_method\": \"wallet\",\n        \"status\": \"approved\",\n        \"created_at\": \"2026-07-17T12:28:15.753Z\",\n        \"payment\": {\n            \"id\": 1,\n            \"amount\": \"5000.00\",\n            \"payment_method\": \"paystack\",\n            \"reference\": \"a9ef1bbd-d446-4794-90f1-986124001a36\",\n            \"status\": \"successful\",\n            \"paid_at\": \"2026-07-17T10:14:53.367Z\"\n        },\n        \"requested_by\": {\n            \"id\": 1,\n            \"full_name\": \"Gift Isiuwa Updated\",\n            \"email\": \"igiewegiftisiuwa@gmail.com\",\n            \"phone\": \"09153849820\",\n            \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n            \"role\": \"farmer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-16T15:31:32.880Z\",\n            \"updated_at\": \"2026-07-17T05:36:41.163Z\"\n        },\n        \"approved_by\": {\n            \"id\": 3,\n            \"full_name\": \"Admin Salewa\",\n            \"email\": \"isiuquirkventures@gmail.com\",\n            \"phone\": \"08031118954\",\n            \"password\": \"$2b$10$VZGl3JI4vp08Poa9Lqvo.ueykaah213ChTZ4P5TFXl2mUQJBG26WK\",\n            \"role\": \"admin\",\n            \"is_verified\": false,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": \"597632\",\n            \"verification_token_expires\": \"2026-07-17T13:16:15.379Z\",\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-17T13:06:15.386Z\",\n            \"updated_at\": \"2026-07-17T13:06:15.386Z\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJpc2l1cXVpcmt2ZW50dXJlc0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODQyOTM2NDMsImV4cCI6MTc4NDI5NzI0M30.PcUYzU2ms3cJxBSROv2v1pshYPPvdVvFaYoCaXwXwlI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/admin/users",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "admin",
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Users",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BaseUrl}}/admin/users",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "63"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3f-y8SLTY/iIFOhV6YQ0m51m2/wHqo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 13:31:48 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Access denied. No token provided.\"\n}"
+            },
+            {
+              "name": "Get All Users",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BaseUrl}}/admin/users",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1399"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"577-vjP+SNALip1EJ5cLnoHM3inQ4Cg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 13:32:22 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"full_name\": \"Admin Salewa\",\n            \"email\": \"isiuquirkventures@gmail.com\",\n            \"phone\": \"08031118954\",\n            \"password\": \"$2b$10$VZGl3JI4vp08Poa9Lqvo.ueykaah213ChTZ4P5TFXl2mUQJBG26WK\",\n            \"role\": \"admin\",\n            \"is_verified\": false,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": \"597632\",\n            \"verification_token_expires\": \"2026-07-17T13:16:15.379Z\",\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-17T13:06:15.386Z\",\n            \"updated_at\": \"2026-07-17T13:06:15.386Z\"\n        },\n        {\n            \"id\": 2,\n            \"full_name\": \"Iyanu Godwin\",\n            \"email\": \"igiewegift793@gmail.com\",\n            \"phone\": \"08055227737\",\n            \"password\": \"$2b$10$Ul2nex3Qurgg.C/aLp5EY.Tj6/E8OxoEq.IuskebI76sO/8sTsL86\",\n            \"role\": \"buyer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-17T04:40:27.493Z\",\n            \"updated_at\": \"2026-07-17T06:11:37.500Z\"\n        },\n        {\n            \"id\": 1,\n            \"full_name\": \"Gift Isiuwa Updated\",\n            \"email\": \"igiewegiftisiuwa@gmail.com\",\n            \"phone\": \"09153849820\",\n            \"password\": \"$2b$10$YGmPNDSziI/RdlmfOEcsg.FJ7pl4vNaL02KGK39WhmLLG70pP04Jm\",\n            \"role\": \"farmer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-16T15:31:32.880Z\",\n            \"updated_at\": \"2026-07-17T05:36:41.163Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Dashboard",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJpc2l1cXVpcmt2ZW50dXJlc0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODQyOTM2NDMsImV4cCI6MTc4NDI5NzI0M30.PcUYzU2ms3cJxBSROv2v1pshYPPvdVvFaYoCaXwXwlI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/admin/dashboard",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "admin",
+                "dashboard"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Dashboard",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{BaseUrl}}/admin/dashboard",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "dashboard"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "78"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4e-04oopJR1uKgPMRJCsoKNC9nzoRY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 13:54:54 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"total_users\": 3,\n        \"total_payments\": 1,\n        \"total_refunds\": 1\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJpc2l1cXVpcmt2ZW50dXJlc0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODQyOTM2NDMsImV4cCI6MTc4NDI5NzI0M30.PcUYzU2ms3cJxBSROv2v1pshYPPvdVvFaYoCaXwXwlI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"is_active\": \"false\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/admin/users/2/status",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "admin",
+                "users",
+                "2",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "status",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"is_active\": \"false\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{BaseUrl}}/admin/users/2/status",
+                  "host": [
+                    "{{BaseUrl}}"
+                  ],
+                  "path": [
+                    "admin",
+                    "users",
+                    "2",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "468"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d4-TmKboeLqUf0A5AAj3ttEuMj6TSM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Jul 2026 14:02:36 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 2,\n        \"full_name\": \"Iyanu Godwin\",\n        \"email\": \"igiewegift793@gmail.com\",\n        \"phone\": \"08055227737\",\n        \"password\": \"$2b$10$Ul2nex3Qurgg.C/aLp5EY.Tj6/E8OxoEq.IuskebI76sO/8sTsL86\",\n        \"role\": \"buyer\",\n        \"is_verified\": true,\n        \"verified_badge\": false,\n        \"is_active\": false,\n        \"verification_token\": null,\n        \"verification_token_expires\": null,\n        \"reset_password_token\": null,\n        \"reset_password_token_expires\": null,\n        \"created_at\": \"2026-07-17T04:40:27.493Z\",\n        \"updated_at\": \"2026-07-17T14:02:36.719Z\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "get wallet",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "get wallet",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/wallet",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "wallet"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "580"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"244-4bvP5k6t644PzX0DiSZoArHMAW8\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jul 2026 08:13:21 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 2,\n        \"balance\": \"0.00\",\n        \"created_at\": \"2026-07-17T07:05:57.568Z\",\n        \"updated_at\": \"2026-07-17T07:05:57.568Z\",\n        \"user\": {\n            \"id\": 2,\n            \"full_name\": \"Iyanu Godwin\",\n            \"email\": \"igiewegift793@gmail.com\",\n            \"phone\": \"08055227737\",\n            \"password\": \"$2b$10$Ul2nex3Qurgg.C/aLp5EY.Tj6/E8OxoEq.IuskebI76sO/8sTsL86\",\n            \"role\": \"buyer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-17T04:40:27.493Z\",\n            \"updated_at\": \"2026-07-17T06:11:37.500Z\"\n        }\n    }\n}"
+        },
+        {
+          "name": "fund wallet",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"amount\": \"1000\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/wallet/fund",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "wallet",
+                "fund"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "622"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"26e-Ig4CCBO1DmzQrAbka0JPKiVch6s\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jul 2026 08:59:01 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Wallet funded successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"balance\": \"2000.00\",\n        \"created_at\": \"2026-07-17T07:05:57.568Z\",\n        \"updated_at\": \"2026-07-17T08:59:01.109Z\",\n        \"user\": {\n            \"id\": 2,\n            \"full_name\": \"Iyanu Godwin\",\n            \"email\": \"igiewegift793@gmail.com\",\n            \"phone\": \"08055227737\",\n            \"password\": \"$2b$10$Ul2nex3Qurgg.C/aLp5EY.Tj6/E8OxoEq.IuskebI76sO/8sTsL86\",\n            \"role\": \"buyer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-17T04:40:27.493Z\",\n            \"updated_at\": \"2026-07-17T06:11:37.500Z\"\n        }\n    }\n}"
+        },
+        {
+          "name": "get wallet transactions",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/wallet/transactions",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "wallet",
+                "transactions"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "203"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"cb-Iv+TzgayXFwp1peZjW1TYmc+akE\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jul 2026 09:02:52 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"amount\": \"1000.00\",\n            \"transaction_type\": \"credit\",\n            \"reference\": \"4659972f-d603-43b2-ac3c-e1fa783bb35d\",\n            \"description\": \"Wallet funding\",\n            \"created_at\": \"2026-07-17T08:59:01.130Z\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "wallet withdraw",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"amount\": \"500\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/wallet/withdraw",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "wallet",
+                "withdraw"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "617"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"269-Dw293KO14vvuisSpgOySTMnMLlk\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jul 2026 09:04:39 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Withdrawal successful\",\n    \"data\": {\n        \"id\": 2,\n        \"balance\": \"1500.00\",\n        \"created_at\": \"2026-07-17T07:05:57.568Z\",\n        \"updated_at\": \"2026-07-17T09:04:39.357Z\",\n        \"user\": {\n            \"id\": 2,\n            \"full_name\": \"Iyanu Godwin\",\n            \"email\": \"igiewegift793@gmail.com\",\n            \"phone\": \"08055227737\",\n            \"password\": \"$2b$10$Ul2nex3Qurgg.C/aLp5EY.Tj6/E8OxoEq.IuskebI76sO/8sTsL86\",\n            \"role\": \"buyer\",\n            \"is_verified\": true,\n            \"verified_badge\": false,\n            \"is_active\": true,\n            \"verification_token\": null,\n            \"verification_token_expires\": null,\n            \"reset_password_token\": null,\n            \"reset_password_token_expires\": null,\n            \"created_at\": \"2026-07-17T04:40:27.493Z\",\n            \"updated_at\": \"2026-07-17T06:11:37.500Z\"\n        }\n    }\n}"
+        },
+        {
+          "name": "get wallet transactions 2",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/wallet/transactions",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "wallet",
+                "transactions"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "387"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"183-BuFWNqkmq+xZCHQQrPqB0EsePBo\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jul 2026 09:06:12 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"amount\": \"500.00\",\n            \"transaction_type\": \"withdrawal\",\n            \"reference\": \"b658d6c6-0e2b-488c-91b4-c3dbd60c16b7\",\n            \"description\": \"Wallet withdrawal\",\n            \"created_at\": \"2026-07-17T09:04:39.374Z\"\n        },\n        {\n            \"id\": 2,\n            \"amount\": \"1000.00\",\n            \"transaction_type\": \"credit\",\n            \"reference\": \"4659972f-d603-43b2-ac3c-e1fa783bb35d\",\n            \"description\": \"Wallet funding\",\n            \"created_at\": \"2026-07-17T08:59:01.130Z\"\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "BaseUrl",
+      "value": ""
+    }
+  ]
+}

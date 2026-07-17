@@ -1,8 +1,8 @@
 const { EntitySchema } = require("typeorm");
 
 module.exports = new EntitySchema({
-    name: "Review",
-    tableName: "reviews",
+    name: "Refund",
+    tableName: "refunds",
 
     columns: {
         id: {
@@ -11,13 +11,17 @@ module.exports = new EntitySchema({
             generated: true,
         },
 
-        rating: {
-            type: "int",
+        reason: {
+            type: "text",
         },
 
-        comment: {
-            type: "text",
-            nullable: true,
+        refund_method: {
+            type: "enum",
+            enum: [
+                "wallet",
+                "bank"
+            ],
+            default: "wallet",
         },
 
         status: {
@@ -27,12 +31,7 @@ module.exports = new EntitySchema({
                 "approved",
                 "rejected"
             ],
-            default: "approved",
-        },
-
-        moderation_reason: {
-            type: "text",
-            nullable: true,
+            default: "pending",
         },
 
         created_at: {
@@ -42,36 +41,22 @@ module.exports = new EntitySchema({
     },
 
     relations: {
-        reviewer: {
+        payment: {
+            target: "Payment",
+            type: "many-to-one",
+            joinColumn: true,
+            nullable: false,
+        },
+
+        requested_by: {
             target: "User",
             type: "many-to-one",
             joinColumn: true,
             nullable: false,
         },
 
-        reviewed_user: {
+        approved_by: {
             target: "User",
-            type: "many-to-one",
-            joinColumn: true,
-            nullable: false,
-        },
-
-        order: {
-            target: "Order",
-            type: "many-to-one",
-            joinColumn: true,
-            nullable: true,
-        },
-
-        booking: {
-            target: "Booking",
-            type: "many-to-one",
-            joinColumn: true,
-            nullable: true,
-        },
-
-        logistics_request: {
-            target: "LogisticsRequest",
             type: "many-to-one",
             joinColumn: true,
             nullable: true,
