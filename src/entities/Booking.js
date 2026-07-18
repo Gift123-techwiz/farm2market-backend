@@ -16,7 +16,9 @@ module.exports = new EntitySchema({
         },
 
         quantity: {
-            type: "int",
+            type: "decimal",
+            precision: 10,
+            scale: 2,
         },
 
         start_date: {
@@ -76,4 +78,4 @@ module.exports = new EntitySchema({
             inverseSide: "booking",
         },
     },
-});
+})

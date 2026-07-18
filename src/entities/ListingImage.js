@@ -15,6 +15,11 @@ module.exports = new EntitySchema({
             type: "text",
         },
 
+        public_id: {
+            type: "varchar",
+            nullable: false,
+        },
+
         created_at: {
             type: "timestamp",
             createDate: true,
@@ -25,8 +30,11 @@ module.exports = new EntitySchema({
         listing: {
             target: "ProduceListing",
             type: "many-to-one",
-            joinColumn: true,
+            joinColumn: {
+                name: "listing_id",
+            },
             nullable: false,
+            onDelete: "CASCADE",
         },
     },
 });
