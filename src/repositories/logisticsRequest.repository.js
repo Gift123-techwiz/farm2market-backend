@@ -1,63 +1,45 @@
 const AppDataSource = require("../config/database");
 
-const repository = AppDataSource.getRepository("LogisticsProfile");
+const repository = AppDataSource.getRepository("LogisticsRequest");
 
 const create = async (data) => {
-
-    const logistics = repository.create(data);
-
-    return await repository.save(logistics);
-
+    const request = repository.create(data);
+    return await repository.save(request);
 };
 
 const findAll = async () => {
-
     return await repository.find({
         relations: {
-            user: true,
+            booking: true,
+            logistics_partner: true,
         },
     });
-
 };
 
 const findById = async (id) => {
 
     return await repository.findOne({
-        where: { id },
-        relations: {
-            user: true,
-        },
-    });
-
-};
-
-const findByUser = async (userId) => {
-
-    return await repository.findOne({
         where: {
-            user: {
-                id: userId,
-            },
+            id,
         },
         relations: {
-            user: true,
+            booking: true,
+            logistics_partner: {
+                user: true,
+            },
         },
     });
 
 };
 
 const update = async (id, data) => {
-
     await repository.update(id, data);
-
     return await findById(id);
-
 };
 
 module.exports = {
     create,
     findAll,
     findById,
-    findByUser,
     update,
 };

@@ -25,12 +25,17 @@ module.exports = new EntitySchema({
             enum: [
                 "pending",
                 "approved",
-                "rejected"
+                "rejected",
             ],
-            default: "approved",
+            default: "pending",
         },
 
-        moderation_reason: {
+        moderated_at: {
+            type: "timestamp",
+            nullable: true,
+        },
+
+        rejection_reason: {
             type: "text",
             nullable: true,
         },
@@ -42,6 +47,7 @@ module.exports = new EntitySchema({
     },
 
     relations: {
+
         reviewer: {
             target: "User",
             type: "many-to-one",
@@ -76,5 +82,13 @@ module.exports = new EntitySchema({
             joinColumn: true,
             nullable: true,
         },
+
+        moderated_by: {
+            target: "User",
+            type: "many-to-one",
+            joinColumn: true,
+            nullable: true,
+        },
+
     },
 });

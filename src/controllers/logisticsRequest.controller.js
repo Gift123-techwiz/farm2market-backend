@@ -1,17 +1,14 @@
-const logisticsService = require("../services/logistics.service");
+const logisticsRequestService = require("../services/logisticsRequest.service");
 
-const createLogisticsProfile = async (req, res) => {
+const createRequest = async (req, res) => {
 
     try {
 
-        const logistics = await logisticsService.createProfile(
-            req.user,
-            req.body
-        );
+        const request = await logisticsRequestService.createRequest(req.body);
 
         return res.status(201).json({
             success: true,
-            data: logistics,
+            data: request,
         });
 
     } catch (error) {
@@ -25,15 +22,15 @@ const createLogisticsProfile = async (req, res) => {
 
 };
 
-const getAllLogisticsProfiles = async (req, res) => {
+const getAllRequests = async (req, res) => {
 
     try {
 
-        const logistics = await logisticsService.getAllProfiles();
+        const requests = await logisticsRequestService.getAllRequests();
 
         return res.status(200).json({
             success: true,
-            data: logistics,
+            data: requests,
         });
 
     } catch (error) {
@@ -47,17 +44,17 @@ const getAllLogisticsProfiles = async (req, res) => {
 
 };
 
-const getLogisticsProfile = async (req, res) => {
+const getRequestById = async (req, res) => {
 
     try {
 
-        const logistics = await logisticsService.getProfileById(
+        const request = await logisticsRequestService.getRequestById(
             req.params.id
         );
 
         return res.status(200).json({
             success: true,
-            data: logistics,
+            data: request,
         });
 
     } catch (error) {
@@ -71,18 +68,19 @@ const getLogisticsProfile = async (req, res) => {
 
 };
 
-const updateLogisticsProfile = async (req, res) => {
+const updateRequest = async (req, res) => {
 
     try {
 
-        const logistics = await logisticsService.updateProfile(
+        const request = await logisticsRequestService.updateRequest(
             req.user,
+            req.params.id,
             req.body
         );
 
         return res.status(200).json({
             success: true,
-            data: logistics,
+            data: request,
         });
 
     } catch (error) {
@@ -97,8 +95,8 @@ const updateLogisticsProfile = async (req, res) => {
 };
 
 module.exports = {
-    createLogisticsProfile,
-    getAllLogisticsProfiles,
-    getLogisticsProfile,
-    updateLogisticsProfile,
+    createRequest,
+    getAllRequests,
+    getRequestById,
+    updateRequest,
 };

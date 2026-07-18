@@ -48,11 +48,16 @@ module.exports = new EntitySchema({
             nullable: true,
         },
 
+        last_location_update: {
+            type: "timestamp",
+            nullable: true,
+        },
+
         status: {
             type: "enum",
             enum: [
                 "pending",
-                "assigned",
+                "accepted",
                 "picked_up",
                 "in_transit",
                 "delivered",
@@ -65,7 +70,7 @@ module.exports = new EntitySchema({
     relations: {
         booking: {
             target: "Booking",
-            type: "one-to-one",
+            type: "many-to-one",
             joinColumn: true,
         },
 
