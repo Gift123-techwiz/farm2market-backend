@@ -12,7 +12,9 @@ module.exports = new EntitySchema({
         },
 
         quantity: {
-            type: "int",
+          type: "decimal",
+          precision: 10,
+          scale: 2,
         },
 
         total_price: {
@@ -28,7 +30,7 @@ module.exports = new EntitySchema({
                 "confirmed",
                 "processing",
                 "completed",
-                "cancelled"
+                "cancelled",
             ],
             default: "pending",
         },
@@ -48,17 +50,23 @@ module.exports = new EntitySchema({
         buyer: {
             target: "BuyerProfile",
             type: "many-to-one",
-            joinColumn: true,
+            joinColumn: {
+                name: "buyer_id",
+            },
             inverseSide: "orders",
             nullable: false,
+            onDelete: "CASCADE",
         },
 
         listing: {
             target: "ProduceListing",
             type: "many-to-one",
-            joinColumn: true,
+            joinColumn: {
+                name: "listing_id",
+            },
             inverseSide: "orders",
             nullable: false,
+            onDelete: "CASCADE",
         },
 
         payment: {

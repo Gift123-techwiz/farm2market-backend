@@ -21,15 +21,21 @@ module.exports = new EntitySchema({
         buyer: {
             target: "BuyerProfile",
             type: "many-to-one",
-            joinColumn: true,
+            joinColumn: {
+                name: "buyer_id",
+            },
             nullable: false,
+            onDelete: "CASCADE",
         },
 
         listing: {
             target: "ProduceListing",
             type: "many-to-one",
-            joinColumn: true,
+            joinColumn: {
+                name: "listing_id",
+            },
             nullable: false,
+            onDelete: "CASCADE",
         },
     },
 });

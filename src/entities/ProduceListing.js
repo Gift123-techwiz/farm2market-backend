@@ -13,6 +13,7 @@ module.exports = new EntitySchema({
 
         produce_name: {
             type: "varchar",
+            length: 100,
         },
 
         quantity: {
@@ -31,6 +32,7 @@ module.exports = new EntitySchema({
 
         quality_grade: {
             type: "varchar",
+            length: 20,
         },
 
         description: {
@@ -63,14 +65,18 @@ module.exports = new EntitySchema({
         farmer: {
             target: "FarmerProfile",
             type: "many-to-one",
-            joinColumn: true,
+            joinColumn: {
+                name: "farmer_id",
+            },
             nullable: false,
+            onDelete: "CASCADE",
         },
 
         images: {
             target: "ListingImage",
             type: "one-to-many",
             inverseSide: "listing",
+            cascade: true,
         },
 
         saved_by: {

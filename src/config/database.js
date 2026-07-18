@@ -29,7 +29,6 @@ const AppDataSource = new DataSource({
     database: process.env.DB_DATABASE,
 
     synchronize: true,
-
     logging: false,
 
     entities: [
@@ -55,8 +54,7 @@ const AppDataSource = new DataSource({
     ],
 
     migrations: [],
-
-    subscribers: []
+    subscribers: [],
 });
 
 module.exports = AppDataSource;
