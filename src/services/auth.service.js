@@ -1,3 +1,4 @@
+const notificationService = require("./notification.service");
 const userRepository = require("../repositories/user.repository");
 const { hashPassword, comparePassword } = require("../utils/bcrypt");
 const { generateToken } = require("../utils/jwt");
@@ -30,6 +31,12 @@ const register = async (userData) => {
         user,
         balance: 0,
     });
+
+    await notificationService.createNotification(
+        user,
+        "Welcome to Farm2Market",
+        "Your account has been created successfully. Verify your email to unlock all features."
+    );
 
     const token = generateToken({
         id: user.id,
@@ -107,6 +114,12 @@ const verifyEmail = async (token) => {
     }
 
     await userRepository.updateVerification(user.id);
+
+    await notificationService.createNotification(
+        user,
+        "Email Verified",
+        "Your email has been verified successfully."
+    );
 
     return {
         message: "Email verified successfully",
@@ -190,6 +203,12 @@ const resetPassword = async (token, password) => {
         reset_password_token: null,
         reset_password_token_expires: null,
     });
+
+    await notificationService.createNotification(
+        user,
+        "Password Changed",
+        "Your password has been changed successfully. If this wasn't you, contact support immediately."
+    );
 
     return {
         message: "Password reset successful.",

@@ -1,3 +1,4 @@
+const notificationService = require("./notification.service");
 const { v4: uuid } = require("uuid");
 
 const walletRepository = require("../repositories/wallet.repository");

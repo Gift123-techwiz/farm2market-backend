@@ -1,3 +1,4 @@
+const notificationService = require("./notification.service");
 const { v4: uuid } = require("uuid");
 
 const paymentRepository = require("../repositories/payment.repository");
@@ -73,6 +74,12 @@ const verifyPayment = async (reference) => {
 
         );
 
+        await notificationService.createNotification(
+            payment.user,
+            "Payment Successful",
+            `Your payment of ₦${payment.amount} was successful.`
+        );
+
     }
 
     return await paymentRepository.findByReference(reference);
@@ -116,6 +123,12 @@ const requestRefund = async (
 
     });
 
+    await notificationService.createNotification(
+        user,
+        "Refund Requested",
+        "Your refund request has been received and is awaiting approval."
+    );
+
     return refund;
 
 };
@@ -124,6 +137,5 @@ module.exports = {
     initializePayment,
     verifyPayment,
     paymentHistory,
-    verifyPayment,
     requestRefund,
 };
