@@ -13,7 +13,9 @@ class OrderRepository {
   async findAll() {
     return await this.repository.find({
       relations: {
-        buyer: true,
+        buyer: {
+            user: true,
+        },
         listing: {
           farmer: true,
           images: true,
@@ -29,7 +31,9 @@ class OrderRepository {
     return await this.repository.findOne({
       where: { id },
       relations: {
-        buyer: true,
+        buyer: {
+            user: true,
+        },
         listing: {
           farmer: true,
           images: true,
@@ -46,10 +50,13 @@ class OrderRepository {
         },
       },
       relations: {
-        listing: {
-          farmer: true,
-          images: true,
-        },
+          buyer: {
+              user: true,
+          },
+          listing: {
+              farmer: true,
+              images: true,
+          },
       },
       order: {
         created_at: "DESC",
@@ -67,7 +74,9 @@ class OrderRepository {
         },
       },
       relations: {
-        buyer: true,
+        buyer: {
+            user: true,
+        },
         listing: {
           images: true,
         },

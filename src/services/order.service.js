@@ -1,3 +1,5 @@
+const notificationService = require("./notification.service");
+const emailService = require("./email.service");
 const orderRepository = require("../repositories/order.repository");
 const AppDataSource = require("../config/data-source");
 
@@ -30,11 +32,35 @@ class OrderService {
       throw new Error("This produce is no longer available.");
     }
 
-    return await orderRepository.create({
-      ...orderData,
-      buyer,
-      listing,
+    const order = await orderRepository.create({
+    ...orderData,
+    buyer,
+    listing,
     });
+
+    await notificationService.createNotification(
+        buyer.user,
+        "Order Placed",
+        `Your order for ${listing.produce_name} has been placed successfully.`
+    );
+
+    await notificationService.createNotification(
+        listing.farmer.user,
+        "New Order",
+        `You have received a new order for ${listing.produce_name}.`
+    );
+
+    await emailService.sendOrderPlacedEmail(
+        buyer.user.email,
+        listing.produce_name
+    );
+
+    await emailService.sendNewOrderReceivedEmail(
+        listing.farmer.user.email,
+        listing.produce_name
+    );
+
+    return order;
   }
 
   async getAllOrders() {
@@ -59,17 +85,82 @@ class OrderService {
     return await orderRepository.findByFarmer(farmerId);
   }
 
-  async updateOrderStatus(id, status) {
+async updateOrderStatus(id, status) {
+
     const order = await orderRepository.findById(id);
 
     if (!order) {
-      throw new Error("Order not found.");
+        throw new Error("Order not found.");
     }
 
-    return await orderRepository.update(id, {
-      status,
+    const updatedOrder = await orderRepository.update(id, {
+        status,
     });
-  }
+
+    switch (status) {
+
+        case "confirmed":
+
+            await notificationService.createNotification(
+                order.buyer.user,
+                "Order Confirmed",
+                "Your order has been accepted by the farmer."
+            );
+
+            await notificationService.createNotification(
+                order.listing.farmer.user,
+                "Order Accepted",
+                "You accepted a buyer's order."
+            );
+
+            await emailService.sendOrderAcceptedEmail(
+                order.buyer.user.email
+            );
+
+            break;
+
+        case "cancelled":
+
+            await notificationService.createNotification(
+                order.buyer.user,
+                "Order Cancelled",
+                "Your order has been cancelled."
+            );
+
+            await notificationService.createNotification(
+                order.listing.farmer.user,
+                "Order Cancelled",
+                "You cancelled a buyer's order."
+            );
+
+            await emailService.sendOrderCancelledEmail(
+                order.buyer.user.email
+            );
+
+            break;
+
+        case "completed":
+
+            await notificationService.createNotification(
+                order.buyer.user,
+                "Order Completed",
+                "Your order has been completed successfully."
+            );
+
+            await notificationService.createNotification(
+                order.listing.farmer.user,
+                "Order Completed",
+                "You completed a buyer's order."
+            );
+
+            await emailService.sendOrderCompletedEmail(
+                order.buyer.user.email
+            );
+
+            break;
+    }
+    return updatedOrder;
+}
 
   async deleteOrder(id) {
     const order = await orderRepository.findById(id);

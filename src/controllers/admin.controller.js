@@ -25,6 +25,31 @@ const approveRefund = async (req, res) => {
 
 };
 
+const rejectRefund = async (req, res) => {
+
+    try {
+
+        const refund = await adminService.rejectRefund(
+            req.user,
+            req.params.id
+        );
+
+        return res.json({
+            success: true,
+            data: refund,
+        });
+
+    } catch (error) {
+
+        return res.status(400).json({
+            success: false,
+            message: error.message,
+        });
+
+    }
+
+};
+
 const getUsers = async (req, res) => {
 
     try {
@@ -94,9 +119,38 @@ const getDashboard = async (req, res) => {
 
 };
 
+const moderateReview = async (req, res) => {
+
+    try {
+
+        const review = await adminService.moderateReview(
+            req.user,
+            req.params.id,
+            req.body.status,
+            req.body.rejection_reason
+        );
+
+        return res.json({
+            success: true,
+            data: review,
+        });
+
+    } catch (error) {
+
+        return res.status(400).json({
+            success: false,
+            message: error.message,
+        });
+
+    }
+
+};
+
 module.exports = {
     approveRefund,
     getUsers,
     updateUserStatus,
     getDashboard,
+    rejectRefund,
+    moderateReview
 };

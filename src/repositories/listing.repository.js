@@ -13,7 +13,9 @@ class ListingRepository {
   async findAll() {
     return await this.repository.find({
       relations: {
-        farmer: true,
+        farmer: {
+            user: true,
+        },
         images: true,
       },
       order: {
@@ -26,7 +28,9 @@ class ListingRepository {
     return await this.repository.findOne({
       where: { id },
       relations: {
-        farmer: true,
+        farmer: {
+            user: true,
+        },
         images: true,
       },
     });
@@ -50,6 +54,9 @@ class ListingRepository {
         },
       },
       relations: {
+        farmer: {
+            user: true,
+        },
         images: true,
       },
       order: {
